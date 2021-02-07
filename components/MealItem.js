@@ -1,5 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground
+} from 'react-native';
 
 const MealItem = props => {
   return (
@@ -17,6 +23,8 @@ const MealItem = props => {
             </ImageBackground>
           </View>
           <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
+            {/* we can use same style name at a time */}
+            {/* <View style={styles.mealRow}> */}
             <Text>{props.duration}m</Text>
             <Text>{props.complexity.toUpperCase()}</Text>
             <Text>{props.affordability.toUpperCase()}</Text>
@@ -39,7 +47,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   mealRow: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   mealHeader: {
     height: '85%'
