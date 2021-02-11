@@ -8,6 +8,9 @@ const FiltersScreen = props => {
     </View>
   )
 }
+FiltersScreen.navigationOptions = {
+  headerTitle: 'Filter Meals'
+};
 
 export default FiltersScreen
 
